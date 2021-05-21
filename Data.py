@@ -5,7 +5,7 @@ from pyrogram.types import InlineKeyboardButton
 
 class Data:
     # Start Message
-    START = "Hey {}. \n\nWelcome to {} \n\nI can unzip & unrar files you send me and upload them to our private chat. \nI will also total the contents & number of files."
+    START = "Hi {}🤟 . \n\nWelcome to {} \n\nI can unzip & unrar files. \nI will also total the contents & number of files."
 
     if Config.OWNER_ID != 0:
         if Config.OWNER_NAME:
@@ -19,10 +19,10 @@ class Data:
             print("Quitting the bot")
             raise SystemExit
     else:
-        START += f"\n\nBy @MysteryBots ♥"
+        START += f"\n\nBy @PyJeBots ♥"
 
     # About Message
-    ABOUT = "**About This Bot** \n\nThis is an open source Unzip bot by @MysteryBots \n\nSource : [Click Here](https://github.com/MysteryBots/UnzipBot) \n\nFramework : [Pyrogram](docs.pyrogram.org) \n\nLanguage : [Python](www.python.org) \n\nDeveloper : [Mყʂƚҽɾყ Bσყ](https://t.me/MysteryxD)"
+    ABOUT = "**About This Bot** \n\nThis is an Unzip bot by @PyJeBots "
 
     if Config.OWNER_ID != 0:
         if Config.OWNER_NAME:
