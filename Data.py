@@ -5,7 +5,7 @@ from pyrogram.types import InlineKeyboardButton
 
 class Data:
     # Start Message
-    START = "Hey {}. \n\nWelcome to {} \n\nI can unzip & unrar files you send me and upload them to our private chat. \nI will also total the contents & number of files."
+    START = "Hi {}. \n\nWelcome to {} \n\nI can unzip & unrar files that you send me and upload them to our private chat. \nI will also total the contents & number of files."
 
     if Config.OWNER_ID != 0:
         if Config.OWNER_NAME:
@@ -19,10 +19,10 @@ class Data:
             print("Quitting the bot")
             raise SystemExit
     else:
-        START += f"\n\nBy @MysteryBots ♥"
+        START += f"\n\nBy @PyJeBots ♥"
 
     # About Message
-    ABOUT = "**About This Bot** \n\nThis is an open source Unzip bot by @MysteryBots \n\nSource : [Click Here](https://github.com/MysteryBots/UnzipBot) \n\nFramework : [Pyrogram](docs.pyrogram.org) \n\nLanguage : [Python](www.python.org) \n\nDeveloper : [Mყʂƚҽɾყ Bσყ](https://t.me/MysteryxD)"
+    ABOUT = "**About This Bot** \n\n \n\nVersion : 1.2 \n\nFramework : [Pyrogram](docs.pyrogram.org) \n\nLanguage : [Python](www.python.org) \n\nDeveloper : [PyJe Bots©](https://t.me/PyJeBots)"
 
     if Config.OWNER_ID != 0:
         if Config.OWNER_NAME:
@@ -35,30 +35,20 @@ class Data:
             )
             print("Quitting the bot")
             raise SystemExit
-
-    # Deploy Message
-    DEPLOY = """
-**Wanna create your own such bot??** 
-
-This is simple and open source bot. 
-Just click below on source code and tap on "Deploy to Heroku" to create your own bot. 
-
-Click Here for [Source Code](https://github.com/MysteryBots/UnzipBot)
-"""
     
     HELP = """
-**Need Help ?? **
+**How to use 🔁 **
 
 Send any zip/rar file then choose a mode and your work is done! 
 I'll unzip/unrar it and return you it's contents.
 
 **Available Commands** :-
 /modes - Know about both modes.
-/about - About this bot and source code.
+/about - About this bot.
 /help - This Message.
 /start - Check if bot is alive.
 
-**Support** - @MysteryBots & @MysteryBotsChat
+**Support** - @PyJeSupport
 """
     
     MODES = """
@@ -88,7 +78,7 @@ This is bit fast but only recommended for larger files as smaller files won't ha
     CHOOSE_MODE = "**CHOOSE MODE ** \n\nChoose a mode from below to start extracting files..."
 
     # Home Button
-    home_button = [[InlineKeyboardButton(text="🏠 Return Home 🏠", callback_data="home")]]
+    home_button = [[InlineKeyboardButton(text="◀️ Back", callback_data="home")]]
 
     # Modes Buttons
 
@@ -107,7 +97,6 @@ This is bit fast but only recommended for larger files as smaller files won't ha
             InlineKeyboardButton("📤 About 📤", callback_data="about"),
         ],
         [InlineKeyboardButton("How to Use me ⁉️", callback_data="help")],
-        [InlineKeyboardButton("Create your own bot", callback_data="deploy")],
-        [InlineKeyboardButton("♥ More Amazing bots ♥", url="https://t.me/MysteryBots")],
-        [InlineKeyboardButton("🎨 Support Group 🎨", url="https://t.me/MysteryBotsChat")],
+        [InlineKeyboardButton("More Amazing bots 💻", url="https://t.me/MysteryBots")],
+        [InlineKeyboardButton(" Support Group 🗣️", url="https://t.me/MysteryBotsChat")],
     ]
