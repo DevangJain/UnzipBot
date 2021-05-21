@@ -22,12 +22,12 @@ class Data:
         START += f"\n\nBy @PyJeBots ♥"
 
     # About Message
-    ABOUT = "**About This Bot** \n\n \n\nVersion : 1.2 \n\nFramework : [Pyrogram](docs.pyrogram.org) \n\nLanguage : [Python](www.python.org) \n\nDeveloper : [PyJe Bots©](https://t.me/PyJeBots)"
+    ABOUT = "**About This Bot** \n\nVersion : [1.2](www.python.org) \n\nFramework : [Pyrogram](docs.pyrogram.org) \n\nLanguage : [Python](www.python.org) \n\nOwner : [PyJe Bots©](https://t.me/PyJeBots)"
 
     if Config.OWNER_ID != 0:
         if Config.OWNER_NAME:
             ABOUT += (
-                f"\n\nMy Owner :- [{Config.OWNER_NAME}](tg://user?id={Config.OWNER_ID})"
+                f"\n\n**Developer** :- [{Config.OWNER_NAME}](tg://user?id={Config.OWNER_ID})"
             )
         else:
             print(
@@ -97,6 +97,6 @@ This is bit fast but only recommended for larger files as smaller files won't ha
             InlineKeyboardButton("📤 About 📤", callback_data="about"),
         ],
         [InlineKeyboardButton("How to Use me ⁉️", callback_data="help")],
-        [InlineKeyboardButton("More Amazing bots 💻", url="https://t.me/MysteryBots")],
-        [InlineKeyboardButton(" Support Group 🗣️", url="https://t.me/MysteryBotsChat")],
+        [InlineKeyboardButton("Developer 💻", url="https://t.me/PyJeBots")],
+        [InlineKeyboardButton(" Support Group 🗣️", url="https://t.me/PyJeSupport")],
     ]
