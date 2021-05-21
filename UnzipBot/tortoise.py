@@ -22,9 +22,9 @@ async def _tortoise(unzipbot, callback_query):
         await msg.reply("Files with size more than 500 MB aren't allowed.", quote=True)
         return
     try:
-        main = await msg.reply("Downloading...", quote=True)
+        main = await msg.reply("Downloading📥", quote=True)
         file = await msg.download(progress=progress, progress_args=(main, "Downloading..."))
-        await main.edit("Extracting Files...")
+        await main.edit("Extracting Files⚒️")
         if file_name.endswith(".zip"):
             with zipfile.ZipFile(file, 'r') as zip_ref:
                 contents = zip_ref.namelist()
@@ -64,7 +64,7 @@ async def _tortoise(unzipbot, callback_query):
                 time.sleep(e.x)
         stop = datetime.now()
         await msg.reply(
-            f"Extraction Done Successfully..! \n\nTook {round((stop - start).total_seconds() / 60, 2)} minutes \n\nFor more bots visit @MysteryBots")
+            f"Extraction Done Successfully..! \n\nTook {round((stop - start).total_seconds() / 60, 2)} minutes \n\n© @PyJeBots ")
     except rarfile.RarCannotExec:
         await msg.reply("**ERROR :** This File is possibly bugged. Cannot extract content. \n\n"
                         "This may happen when a file's extension is manually changed to `.zip`/`.rar` even when file isn't in that format. \n\n"
@@ -72,7 +72,7 @@ async def _tortoise(unzipbot, callback_query):
                         )
     except Exception as e:
         await unzipbot.send_message(msg.chat.id, "**ERROR : **" + str(
-            e) + "\n\nForward this message to @MysteryBots too solve this problem.")
+            e) + "\n\nForward this message to @PyJeSupport to solve this problem.")
     finally:
         if os.path.isdir("downloads"):
             shutil.rmtree("downloads")
